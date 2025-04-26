@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Result Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .loading {
+      font-size: 18px;
+      color: #003366;
+      margin-top: 50px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    .result-card {
+      background: white;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .result-card h2 {
+      color: #0052a0;
+      margin-bottom: 20px;
+    }
+
+    .result-card p {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .subjects {
+      margin-top: 20px;
+    }
+
+    .subjects li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Fetching your result...</h2>
+    <div class="loading">Loading...</div>
+
+    <div id="resultContent" style="display:none;">
+      <div class="result-card">
+        <h2>Examination Result</h2>
+        <p><strong>Exam:</strong> <span id="examType"></span></p>
+        <p><strong>Year:</strong> <span id="examYear"></span></p>
+        <p><strong>Search by:</strong> <span id="searchType"></span> - <span id="searchValue"></span></p>
+        <p><strong>Name:</strong> BARANAGALA WEDARALALAGE SHEM NIMSHA RAJAPAKSHA</p>
+        
+
+        <div class="subjects">
+          <h3>Subject Results:</h3>
+          <ul>
+            <li>INFORMATION & COMMUNICATION TECHNOLOGY: S</li>
+            <li>CHRSITIANITY: S</li>
+            <li>ENGLISH: S</li>
+            <li>General English: A</li>
+          </ul>
+        </div>
+
+        <p><strong>Z-Score:</strong> -</p>
+        <p><strong>District Rank:</strong> -</p>
+        <p><strong>Island Rank:</strong> -</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="result.js"></script>
+</body>
+</html>
